@@ -1,11 +1,11 @@
 """
-This program uses the euler method to solve
-differential equations of the first order.
-It uses numpy and matplotlib to streamline 
-calculations and to visualize the finished graph.
+This program uses the forward euler- and rungekutta 4 method 
+to solve differential equations of the first order.
+It uses numpy and matplotlib to streamline calculations 
+and to visualize the finished graph for easy comparison.
 
 Author: Reymond T
-Version: 1.3
+Version: 1.4
 Since: 2023-05-05
 """
 import os
