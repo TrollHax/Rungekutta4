@@ -5,7 +5,7 @@ It uses numpy and matplotlib to streamline calculations
 and to visualize the finished graph for easy comparison.
 
 Author: Reymond T
-Version: 1.4
+Version: 1.5
 Since: 2023-05-05
 """
 import os
@@ -88,7 +88,9 @@ print(round(x[-1], 2), "\t\t", round(y[-1], 2))
 
 # Plot solution (Euler)
 plt.subplot(121)
-plt.plot(x, y, "o")
+#Don't plot if dataset larger than 100 points to reduce lag
+if (x.size <= 100):
+    plt.plot(x, y, "o")
 plt.plot(x, y)
 plt.xlabel("Value of x")
 plt.ylabel("Value of y")
@@ -105,7 +107,9 @@ print("------------------------------")
 print(round(x[-1], 2), "\t\t", round(y[-1], 2))
 
 plt.subplot(122)
-plt.plot(x, y, "o")
+#Don't plot if dataset larger than 100 points to reduce lag
+if (x.size <= 100):
+    plt.plot(x, y, "o")
 plt.plot(x, y)
 plt.xlabel("Value of x")
 plt.ylabel("Value of y")
